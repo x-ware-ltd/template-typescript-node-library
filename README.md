@@ -1,3 +1,31 @@
+<!-- once setup delete from here... -->
+# How to setup a package from this template
+
+1. in github create a new project from this template with the `Use this template` button. NB the Coveralls git Action running from this commit will fail because the secret will not be present yet (see below) 
+1. In package.json change the following to the values you need:
+    - name
+    - version
+    - description
+    - repository
+    - keywords
+    - author
+    - license
+1. Delete the package-lock.json file (a new one will be automatically created)
+1. In README.md replace all references to `template-typescript-node-library`. A find replace on `x-ware-ltd/template-typescript-node-library` may be sufficient, but review each change. The badges ill start working again once all the steps below have been completed.
+1. In a terminal run `> npm install` which will install all the dependencies and recreate the package-lock.json file. It will also run tests which should all pass.
+1. visit [coveralls.io](https://coveralls.io/), create an account if you don't already have one, and add the project. Find the Token in coveralls.io and add it to github secrets: Settings/Secrets and variables/Actions/Repository secret (`COVERALLS_REPO_TOKEN`).
+1. create a Personal Access Token (classic) in GitHub to allow packages to be published (`write:packages`). Put this in the repository action secrets under `PUBLISH_PACKAGES_TOKEN`. You will now have 2 Repository secrets.
+1. Write and test your code:
+    - install types depending on your target eg. `> npm install @types/node --save-dev` or `> npm install @types/web --save-dev`
+    - edit/replace/remove the `./src/add.ts` and `./src/subtract.ts` files with the functionality you require
+    - edit `./index.ts` to export your new functionality
+    - replace test files in `./tests` with your own tests
+    - update README.md to reflect your functionality - remove explanation regarding the template and use the `Install` and subsequent sections as guidance for your documenting package
+1. Delete this "How to setup a package from this template" section (these instructions for using the template). 
+1. Commit, Push and Release your package (see the steps set out in the Development section in `CONTRIBUTING.md`)
+
+---
+<!-- ... down to here. -->
 # Template ESM Typescript library
 
 A template used for projects which produce both CommonJS and ESM packages from a common Typescript ESM codebase.
