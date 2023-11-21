@@ -30,6 +30,7 @@
   },
   "scripts": {
     "build": "node ./scripts/rm-rf.js ./lib && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node ./scripts/post-build.js",
+    "docs": "typedoc --excludePrivate --includeVersion --out pages/docs src/index.ts",
     "spellcheck": "cspell **/* --dot",
     "mocha": "mocha --loader=ts-node/esm -r ts-node/register tests/**/*.spec.ts",
     "mocha:cov": "node ./scripts/rm-rf.js ./coverage && c8 npm run mocha",
@@ -38,7 +39,7 @@
     "eslint:fix": "eslint src/**/*.{ts,tsx} --fix",
     "test": "npm run spellcheck && npm run eslint && npm run mocha:cov",
     "prepare": "npm test && npm run build",
-    "clean": "node ./scripts/rm-rf.js ./lib ./coverage"
+    "clean": "node ./scripts/rm-rf.js ./lib ./coverage ./pages"
   },
   "keywords": [
     "boilerplate",
@@ -57,6 +58,7 @@
     "eslint-plugin-tsdoc": "^0.2.17",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1",
+    "typedoc": "^0.25.3",
     "typescript": "^5.2.2"
   }
 }
