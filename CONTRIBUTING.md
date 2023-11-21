@@ -127,6 +127,7 @@ The following recommendations are made:
     - Command Palette `Coverage Gutters: Display Coverage` to start
     - Command Palette `Coverage Gutters: Watch` to watch for changes
 <!--- cspell:disable-next-line --->
+- `dbaeumer.vscode-eslint` - provides typescript linting
 
 ## devDependencies List
 
