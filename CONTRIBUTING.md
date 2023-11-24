@@ -122,7 +122,6 @@ Then install that in another npm package using:
 The following recommendations are made:
 
 - `Code Spell Checker` - see above section on Spelling
-- `MyST-Markdown` - provides MyST syntax extensions for markdown in the markdown preview
 <!--- cspell:disable-next-line --->
 - `ryanluker.vscode-coverage-gutters` - provides live coverage info in the left gutter.
     - Command Palette `Coverage Gutters: Display Coverage` to start
