@@ -15,6 +15,7 @@
 1. In a terminal run `> npm install` which will install all the dependencies and recreate the package-lock.json file. It will also run tests which should all pass.
 1. visit [coveralls.io](https://coveralls.io/), create an account if you don't already have one, and add the project. Find the Token in coveralls.io and add it to github secrets: Settings/Secrets and variables/Actions/Repository secret (`COVERALLS_REPO_TOKEN`).
 1. create a Personal Access Token (classic) in GitHub to allow packages to be published (`write:packages`). Put this in the repository action secrets under `PUBLISH_PACKAGES_TOKEN`. You will now have 2 Repository secrets.
+1. in GitHub under Settings/Pages setup 'GitHub Pages' to be deployed by GitHub Actions. Then in Settings/Environments/github-page change the 'Deployment Branches' from 'Selected branches and tags' to 'No restriction'.
 1. Write and test your code:
     - install types depending on your target eg. `> npm install @types/node --save-dev` or `> npm install @types/web --save-dev`
     - edit/replace/remove the `./src/add.ts` and `./src/subtract.ts` files with the functionality you require
@@ -90,7 +91,10 @@ console.log(lib.add(3, -1)); // 2
 
 ## API Reference
 
-Documentation for `add` and `subtract` methods can be found in TSDoc for each
+Documentation can be found at:
+
+- [add](https://x-ware-ltd.github.io/template-typescript-node-library/docs/functions/add.html)
+- [subtract](https://x-ware-ltd.github.io/template-typescript-node-library/docs/functions/subtract.html)
 
 ## Contributing
 
